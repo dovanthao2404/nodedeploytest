@@ -11,6 +11,8 @@ const mongoURI = 'mongodb+srv://dovanthao:oUXaTqsI4peq5Qh2@cluster0.srucgrq.mong
 const client = new MongoClient(mongoURI);
 client.connect().then(() => {
     console.log("connect thanh cong");
+}).catch(() => {
+    console.log("that bai")
 });
 
 app.use(express.json());
